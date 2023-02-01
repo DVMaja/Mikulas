@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+aside img{
+    width: 100%;
+}
+main {
+    margin: auto;
+    max-width: 1000px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "h h"
+    "n n"
+    "as a"
+    "f f";
+    background-color: rgb(255,255,230);
+}
+header {
+    grid-area: h;
+    opacity: 0.8;
+    background-image: url(kepek/fejlec.jpg);
+    height: 550px;
+    color: red;
+    font-weight: bold;
+    font-family: cursive;
+    text-align: center;    
+}
+header h1 {
+    margin-top: 60px;
+}
+nav {
+    grid-area: n;
+    background-color: red;
+    height: 50px;
+}
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style-type: none;
+    padding-left: 0px;
+}
+nav li {
+    border-top: 1px dotted white;
+    border-bottom: 1px dotted white;
+    margin: 5px;
+}
+nav li:hover {
+    background-color: green;
+}
+nav ul a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+aside {
+    grid-area: as;
+}
+article {
+    grid-area: a;
+    text-align: justify;
+    
+}
+article p {
+    font-size: 10px;
+}
+article h2 {
+    font-size: 15px;
+    color: #ff1a1a;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+}
+article img {
+    float: right;
+    border-radius: 10px;
+    box-shadow: 10px 10px grey;
+}
+footer {
+    grid-area: f;
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "h"
+        "n"
+        "a"
+        "as"
+        "f";
+    }
+    aside {
+        display: grid;
+        grid-template-columns: 1fr;
+        
+    }
+  }
